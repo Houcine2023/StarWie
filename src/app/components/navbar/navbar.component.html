@@ -1,0 +1,55 @@
+<div class="w-full flex flex-col py-4 gap-y-4">
+  <div class="flex justify-between items-end gap-40 px-20">
+    <img src="/logo-ieee-try.webp" alt="" class="h-24" />
+    <input
+      placeholder="Find what you are looking for across our website"
+      class="w-full border-2 border-black rounded-full py-4 px-8 bg-light-grey"
+    />
+  </div>
+  <nav
+    class="h-14 relative w-full bg-primary flex justify-between items-center px-20"
+  >
+    <div class="flex flex-row items-center text-white font-semibold h-full">
+      <div
+        *ngFor="let section of linkSections"
+        class="h-full w-full"
+        (mouseenter)="hoveredSection = section"
+        (mouseleave)="hoveredSection = null"
+      >
+        <span class="h-full flex items-center px-4 hover:bg-sky-600">{{
+          section.title
+        }}</span>
+
+        <!-- Details shown on hover -->
+        <div
+          *ngIf="hoveredSection === section"
+          class="absolute top-full left-0 w-full bg-light-grey text-black px-8 py-4 flex flex-row justify-between items-start"
+        >
+           <div class="">
+             <div *ngFor="let link of section.links" class="px-4 py-2 hover:bg-white min-w-80 hover:text-blue-500">
+                <a [href]="link.url" class="font-semibold">{{
+                  link.label
+                }}</a>
+              </div>
+           </div>  
+          <div>
+            <img [src]="section.image" alt="" class="mb-2" />
+            <p>{{ section.paragraph }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex gap-4 items-center">
+      <button
+        class="bg-yellow-500 font-bold py-2 px-4 rounded-full hover:bg-yellow-600"
+      >
+        Subscribe
+      </button>
+      <button
+        class="bg-sky-500 font-bold py-2 px-4 rounded-full hover:bg-sky-600"
+      >
+        Donate
+      </button>
+    </div>
+  </nav>
+</div>
