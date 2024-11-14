@@ -20,7 +20,5 @@ export class AppComponent {
   title = 'StarWie';
   constructor(public router: Router) {}
   
-  isAuthPage() {
-    return this.router.url === '/LogIn' || this.router.url === '/SignIn';
-  }
+
 }

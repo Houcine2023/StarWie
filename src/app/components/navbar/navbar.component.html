@@ -1,4 +1,4 @@
-<div class="w-full flex flex-col py-4 gap-y-4">
+<div class="w-full flex flex-col py-4 pb-0 gap-y-4">
   <div class="flex justify-between items-end gap-40 px-20">
     <img src="/logo-ieee-try.webp" alt="" class="h-24" />
     <input
@@ -16,14 +16,14 @@
         (mouseenter)="hoveredSection = section"
         (mouseleave)="hoveredSection = null"
       >
-        <span class="h-full flex items-center px-4 hover:bg-sky-600">{{
+        <span class="h-full flex items-center px-5 text-center cursor-pointer hover:bg-sky-600">{{
           section.title
         }}</span>
 
         <!-- Details shown on hover -->
         <div
           *ngIf="hoveredSection === section"
-          class="absolute top-full left-0 w-full bg-light-grey text-black px-8 py-4 flex flex-row justify-between items-start"
+          class="absolute top-full left-0 w-full bg-light-grey text-black px-8 py-4 flex flex-row justify-between items-start z-50"
         >
            <div class="">
              <div *ngFor="let link of section.links" class="px-4 py-2 hover:bg-white min-w-80 hover:text-blue-500">
