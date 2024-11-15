@@ -23,14 +23,13 @@
       <img src="/Facebook.png" class="mr-5" />
       <button class="text-center">Login With Facebook</button>
     </div>
-    <div class="flex">
-      <div class="border-s-8"></div>
-      <div class="flex items-center justify-center">
-        <p>or</p>
-      </div>
-      <div class="border-1"></div>
+    <div class="flex items-center my-4">
+      <div class="flex-grow border-t border-gray-300"></div>
+      <span class="mx-4 text-gray-500">OR</span>
+      <div class="flex-grow border-t border-gray-300"></div>
     </div>
-    <p>Email</p>
+
+    <p class="font-sans text-l mb-2">Email</p>
     <div
       class="py-5 px-4 rounded border-2 border-slate-200 hadow-xl flex items-center contrast-more:border-slate-400 space-x-3"
     >
@@ -42,7 +41,7 @@
         placeholder="Saisir Votre mail"
       />
     </div>
-    <p>Mot de passe</p>
+    <p class="font-sans text-l mb-2 mt-1">Mot de passe</p>
     <div
       class="py-5 px-4 rounded border-2 border-slate-200 hadow-xl flex items-center contrast-more:border-slate-400 space-x-3"
     >
@@ -54,25 +53,26 @@
         placeholder="Saisir Votre mail"
       />
     </div>
-    <div class="flex">
-      <label class="space-x-5">
-        <input
-          class="size-5 mt-5"
-          type="checkbox"
-          name="exampleCheckbox"
-          value="value1"
-          checked
-        />
+    <div class="flex items-center justify-between my-4">
+      <label class="flex items-center space-x-2">
+        <input type="checkbox" class="form-checkbox h-4 w-4 text-violet-600" />
+        <span class="text-gray-700">Remember me</span>
       </label>
-
-      <p class="ml-5 mt-3 mr-60">Remember me</p>
-
-      <button class="text-violet-500 basis-60">Forgot Password ?</button>
+      <a href="#" class="text-sm text-violet-600 hover:underline"
+        >Forgot Password?</a
+      >
     </div>
+
     <div
       class="py-5 my-5 rounded border-slate-100 border-2 bg-violet-500 flex items-center justify-center"
     >
-      <button class="flex items-center">LogIn</button>
+      <button class="flex items-center font-sans text-xl text-white">
+        LogIn
+      </button>
+    </div>
+    <div class="flex items-center justify-center mb-5">
+      <p>Don't have an account ?</p>
+      <button class="text-violet-500 ml-1">Register</button>
     </div>
   </div>
 </div>
