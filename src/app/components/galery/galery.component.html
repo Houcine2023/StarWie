@@ -1,5 +1,5 @@
 <div class="flex h-full w-full justify-center items-start relative" >
-  <img src="imageslist[currentIndex]" alt="" class="w-full h-[530px] object-cover">
+  <img [src]= "imageslist[currentIndex].images" alt="imageslist[currentIndex].title" class="w-full h-[530px] object-cover " >
   <div class="absolute top-[30%] left-[11%]">
     <h1 class="  text-7xl font-bold text-white">{{imageslist[currentIndex].paragraph}}</h1>
   

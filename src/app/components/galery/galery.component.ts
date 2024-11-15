@@ -23,6 +23,7 @@ export class GaleryComponent {
 
   timer : any;
   currentIndex : number = 0;
+  isActive : boolean = false;
 
   imageslist : Galeryimages[]=[
     {
@@ -35,19 +36,20 @@ export class GaleryComponent {
       title : 'secondimage',
       images : '/seconde_galery.jpg',
       paragraph : "paragraph number 2",
-      buttTitle : "Buttone1",
+      buttTitle : "Buttone2",
     },
     {
       title : 'firstimage',
-      images : '/first_galery.jpg',
+      images : '/third_galery.jpg',
       paragraph : "paragraph number 3",
-      buttTitle : "Buttone1",
+      buttTitle : "Buttone3",
     },
   ]
 
   ngOnInit() {
     this.timer = setInterval(()=>{
       this.nextSlide();
+      this.isActive = !this.isActive;
     }, 5000)
   }
   ngOnDestroy() {
@@ -63,8 +65,16 @@ export class GaleryComponent {
   }
 
   prevSlide() {
-    this.currentIndex = (this.currentIndex -1) %(this.imageslist.length);
+    this.currentIndex = (this.currentIndex - 1 + this.imageslist.length) % this.imageslist.length;
   }
 
 
 }
+/*
+*ngFor="let image of imageslist; let i = index"
+[ngClass]="{
+  'opacity-100 translate-x-0': currentIndex === i,
+  'opacity-0 -translate-x-full': currentIndex > i,
+  'opacity-0 translate-x-full': currentIndex < i
+}"
+*/

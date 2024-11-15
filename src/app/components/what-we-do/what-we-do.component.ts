@@ -1,0 +1,41 @@
+import { CommonModule, NgFor } from '@angular/common';
+import { Component } from '@angular/core';
+
+interface categorie {
+  img : string;
+  paragraph : string;
+  buttTitle : string;
+}
+
+@Component({
+  selector: 'app-what-we-do',
+  standalone: true,
+  imports: [CommonModule, NgFor],
+  templateUrl: './what-we-do.component.html',
+  styleUrl: './what-we-do.component.css'
+})
+export class WhatWeDoComponent {
+  Sections : categorie[] = [
+    {
+      img : "/lessons.jpg",
+      paragraph : "Over 130 lesson plans you can use to teach school-aged children engineering concepts.",
+      buttTitle : "Search Now"
+    },
+    {
+      img : "/classroom.jpg",
+      paragraph : "Connecting engineers and technical professionals with teachers of school-aged children for a virtual visit to their classroom.",
+      buttTitle : "button2"
+    },
+    {
+      img : "newsletter.jpg",
+      paragraph : "Stay up to date with new TryEngineering resources, products, and events, as well as program and volunteer spotlights.",
+      buttTitle : "button3"
+    },
+    {
+      img : "/StemSummit.jpg",
+      paragraph : "Annual virtual event, where the TryEngineering community comes together to share and inspire with STEM opportunities, resources, and activities.",
+      buttTitle : "button4"
+    },
+    
+  ]
+}

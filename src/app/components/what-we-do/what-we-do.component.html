@@ -1,0 +1,19 @@
+<div class="flex flex-col items-center py-20 w-full h-full">
+  <!-- Centered container for the title and border only -->
+  <div class="p-7 w-[26%]">
+    <h1 class="text-7xl font-bold text-center">What We Do
+    </h1>
+    <div class="border-4 border-primary mt-2"></div>
+  </div>
+  <p class="text-xl">TryEngineering Inspires the Engineers of Tomorrow. TryEngineering aims to empower educators to foster the next generation of technology innovators. We provide educators and volunteers with resources, lesson plans and activities that engage and inspire.</p>
+
+
+  <!-- Container for the paragraph and image in a single line -->
+  <div class="flex justify-around items-start  w-full px-30 mt-10">
+    <div  *ngFor = " let section of Sections " class="flex flex-col justify-center items-center w-[20%] border-primary border-2">
+      <img [src]="section.img" alt="div image">
+      <h2>{{section.paragraph}}</h2>
+      <button class="bg-sky-500 py-3 px-8 rounded-3xl">{{section.buttTitle}}</button>
+    </div>
+</div>
+

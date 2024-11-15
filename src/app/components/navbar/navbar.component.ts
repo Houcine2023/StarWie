@@ -20,42 +20,37 @@ interface LinkSection {
 export class NavbarComponent {
   linkSections: LinkSection[] = [
     {
-      title: 'Parents',
+      title: 'Volunteers Section',
       links: [
-        { label: 'Mission', url: '/mission' },
-        { label: 'Projects', url: '/projects' },
-        { label: 'Webinars', url: '/webinars' },
-        { label: 'Webinars', url: '/webinars' },
+        { label: 'Training Courses', url: '/trainingcourse' },
+        { label: ' Grants', url: '/grants' },
       ],
-      image: '/logo-ieee-try.webp',
+      image: '/val.jpg',
       paragraph: 'Learn more about our mission and projects.',
     },
     {
       title: 'Teachers',
       links: [
-        { label: 'Articles', url: '/articles' },
-        { label: 'Webinars', url: '/webinars' },
-        { label: 'Webinars', url: '/webinars' },
-        { label: 'Webinars', url: '/webinars' },
+        { label: ' Lesson Plans', url: '/Teacherslessons' },
+        { label: 'Resources', url: '/Resources' },
       ],
-      image: '/path/to/explore-resources-image.jpg',
+      image: '/Teachers.jpg',
       paragraph: 'Explore a variety of resources and tools.',
     },
     {
       title: 'Students',
       links: [
-        { label: 'Articles', url: '/articles' },
-        { label: 'Webinars', url: '/webinars' },
-        { label: 'Webinars', url: '/webinars' },
-        { label: 'Webinars', url: '/webinars' },
+        { label: ' Games', url: '/games' },
+        { label: 'STEM Fields', url: '/stemfields' },
+        { label: 'Choosing Your University', url: '/University' },
       ],
-      image: '/path/to/explore-resources-image.jpg',
+      image: '/students.jpg',
       paragraph: 'Explore a variety of resources and tools.',
     },
     {
       title: 'About Us',
       links: [
-        { label: 'Articles', url: '/articles' },
+        { label: 'Choosing Your University', url: '/articles' },
         { label: 'Webinars', url: '/webinars' },
         { label: 'Webinars', url: '/webinars' },
         { label: 'Webinars', url: '/webinars' },
