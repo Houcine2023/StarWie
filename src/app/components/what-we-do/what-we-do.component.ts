@@ -36,6 +36,36 @@ export class WhatWeDoComponent {
       paragraph : "Annual virtual event, where the TryEngineering community comes together to share and inspire with STEM opportunities, resources, and activities.",
       buttTitle : "button4"
     },
+    {
+      img : "/StemSummit.jpg",
+      paragraph : "Annual virtual event, where the TryEngineering community comes together to share and inspire with STEM opportunities, resources, and activities.",
+      buttTitle : "button4"
+    },
+    {
+      img : "/StemSummit.jpg",
+      paragraph : "Annual virtual event, where the TryEngineering community comes together to share and inspire with STEM opportunities, resources, and activities.",
+      buttTitle : "button4"
+    },
+    {
+      img : "/StemSummit.jpg",
+      paragraph : "Annual virtual event, where the TryEngineering community comes together to share and inspire with STEM opportunities, resources, and activities.",
+      buttTitle : "button4"
+    },
+    {
+      img : "/StemSummit.jpg",
+      paragraph : "Annual virtual event, where the TryEngineering community comes together to share and inspire with STEM opportunities, resources, and activities.",
+      buttTitle : "button4"
+    },
     
   ]
+
+  getSectionGroups(): categorie[][] {
+    const chunkSize = 4;
+    const groups = [];
+    for (let i = 0; i < this.Sections.length; i += chunkSize) {
+      groups.push(this.Sections.slice(i, i + chunkSize));
+    }
+    return groups;
+  }
 }
+
