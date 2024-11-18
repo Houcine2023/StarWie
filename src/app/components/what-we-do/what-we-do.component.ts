@@ -1,5 +1,8 @@
-import { CommonModule, NgFor } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { NgIconComponent, provideIcons } from '@ng-icons/core';
+import { heroChevronRight } from '@ng-icons/heroicons/outline';
+
 
 interface categorie {
   img : string;
@@ -10,9 +13,11 @@ interface categorie {
 @Component({
   selector: 'app-what-we-do',
   standalone: true,
-  imports: [CommonModule, NgFor],
+  imports: [CommonModule, NgIconComponent],
   templateUrl: './what-we-do.component.html',
-  styleUrl: './what-we-do.component.css'
+  styleUrl: './what-we-do.component.css',
+  viewProviders: [provideIcons({  heroChevronRight })]
+
 })
 export class WhatWeDoComponent {
   Sections : categorie[] = [

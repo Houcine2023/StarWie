@@ -8,6 +8,10 @@ module.exports = {
       colors: {
         primary: "#772583",
         "light-grey": "#f4f4f4",
+      },
+      backgroundImage: {
+        'community': "url('/community-bg.jpg')",
+
       }
     },
   },

@@ -1,23 +1,43 @@
-<div class="flex flex-col items-center py-20 w-full h-full">
+<div class="flex flex-col items-center py-16 w-full h-full gap-10">
+
   <!-- Title and Border -->
-  <div class="p-7 w-[26%] text-center">
-    <h1 class="text-7xl font-bold">What We Do</h1>
+  <div class="">
+    <h1 class="text-7xl font-bold text-center">What We Do</h1>
     <div class="border-4 border-primary mt-2"></div>
   </div>
-  <p class="text-xl text-center px-10">
-    TryEngineering Inspires the Engineers of Tomorrow. TryEngineering aims to empower educators to foster the next generation of technology innovators. We provide educators and volunteers with resources, lesson plans, and activities that engage and inspire.
 
 
-
-
+  <p class="text-xl text-center px-10 max-w-5xl w-full">
+    TryEngineering Inspires the Engineers of Tomorrow. TryEngineering aims to
+    empower educators to foster the next generation of technology innovators. We
+    provide educators and volunteers with resources, lesson plans, and
+    activities that engage and inspire.
   </p>
 
   <!-- Display Sections in rows -->
-  <div *ngFor="let group of getSectionGroups()" class="flex justify-around items-start w-full mt-10 ">
-    <div *ngFor="let section of group" class="flex flex-col justify-center  items-center gap-20 w-[20%] h-[500px] bg-light-grey  border-none p-4 rounded-2xl">
-      <img [src]="section.img" alt="div image" class="h-32 w-full object-cover rounded-2xl">
-      <h2 class="mt-4 text-center font-semibold">{{ section.paragraph }}</h2>
-      <button class="bg-sky-500 py-3 px-24 font-bold rounded-3xl mt-4 text-white hover:bg-sky-600">{{ section.buttTitle }}</button>
+  <div class="grid grid-cols-4 w-full px-40 gap-10">
+    <div
+      *ngFor="let section of Sections"
+      class="group flex flex-col gap-4 bg-light-grey border-none rounded-2xl shadow-2xl shadow-gray-200 hover:scale-[103%] transition duration-300"
+    >
+      <img
+        [src]="section.img"
+        alt="div image"
+        class="h-48 w-full object-cover rounded-t-2xl"
+      />
+      <div class="flex flex-col justify-between h-full gap-y-4">
+        <div class="px-4 space-y-4">
+          <h3 class="font-semibold text-4xl">Titre</h3>
+          <p>{{ section.paragraph }}</p>
+        </div>
+        <button
+          class="bg-primary py-3 rounded-b-2xl text-white hover:bg-primary/90 flex justify-center items-end w-full gap-2 transition duration-300"
+        >
+        <span class="font-bold text-xl">{{ section.buttTitle }}</span> 
+        <ng-icon name="heroChevronRight" size="1.6rem" class="group-hover:translate-x-2 transition duration-300" ></ng-icon>
+
+        </button>
+      </div>
     </div>
   </div>
 </div>

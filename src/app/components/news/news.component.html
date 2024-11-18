@@ -1,0 +1,28 @@
+<div
+  class="flex flex-col items-center py-16 px-40 w-full h-full gap-10 bg-primary"
+>
+  <div>
+    <h1 class="text-7xl font-bold text-center text-white">News</h1>
+    <div class="border-4 border-yellow-500 mt-2"></div>
+  </div>
+  <div class="grid grid-cols-3 gap-10 w-full">
+    <div
+      *ngFor="let new of news"
+      class="group flex flex-col items-start gap-2 bg-white rounded-3xl text-black overflow-hidden"
+    >
+      <img [src]="new.image" />
+
+      <div class="p-4 space-y-4">
+        <div class="flex gap-4 mb-4">
+          <span *ngFor="let tag of new.tags" class="text-primary text-lg font-medium"> {{ tag }} </span>
+        </div>
+        <span class="text-3xl font-bold">{{ new.title }}</span>
+        <p class="text-xl">{{ new.paragraph }}</p>
+        <button class="text-primary text-2xl font-medium">
+          Read More
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,19 +1,44 @@
-<div class="flex h-full w-full justify-center items-start relative" >
-  <img [src]= "imageslist[currentIndex].images" alt="imageslist[currentIndex].title" class="w-full h-[530px] object-cover " >
-  <div class="absolute top-[30%] left-[11%]">
-    <h1 class="  text-7xl font-bold text-white">{{imageslist[currentIndex].paragraph}}</h1>
-  
-  </div>  
-  <!-- Right button -->
-  <button (click)="nextSlide()" class="absolute flex justify-center items-center text-white text-4xl bg-transparent bottom-[45%] right-[5%] w-14 h-14 rounded-full border-none hover:bg-sky-500">
+<div class="flex h-full w-full justify-center items-start relative">
+  <img
+    [src]="imageslist[currentIndex].images"
+    alt="imageslist[currentIndex].title"
+    class="w-full h-[530px] object-cover transition-transform duration-500 ease-in-out"
+    [ngClass]="{
+      'opacity-100': transitionState === 'enter',
+      'opacity-20': transitionState === 'leave'
+    }"
+  />
+  <div class="absolute top-[30%] left-[11%] transition-opacity duration-500" 
+    [ngClass]="{
+      'opacity-100': transitionState === 'enter',
+      'opacity-2': transitionState === 'leave'
+    }">
+    <h1 class="text-7xl font-bold text-white">
+      {{ imageslist[currentIndex].paragraph }}
+    </h1>
+  </div>
+  <button
+    (click)="nextSlide()"
+    class="absolute flex justify-center items-center text-white text-4xl bg-transparent bottom-[45%] right-[5%] w-14 h-14 rounded-full border-none hover:bg-sky-500"
+  >
     &gt;
   </button>
-  
-  <!-- Left button -->
-  <button class="absolute  text-white text-4xl bg-transparent bottom-[45%]  left-[5%] w-14 h-14 rounded-full border-none hover:bg-sky-500">
+
+  <button
+    (click)="prevSlide()"
+    class="absolute text-white text-4xl bg-transparent bottom-[45%] left-[5%] w-14 h-14 rounded-full border-none hover:bg-sky-500 flex items-center justify-center"
+  >
     &lt;
   </button>
-  <div class="absolute bottom-[30%] left-[11%]">
-    <button class="text-2xl tex bg-sky-500 font-semi-bold  py-2 px-4 rounded-full hover:bg-sky-600">{{imageslist[currentIndex].buttTitle}}</button>
+  <div class="absolute bottom-[30%] left-[11%] transition-opacity duration-500" 
+    [ngClass]="{
+      'opacity-100': transitionState === 'enter',
+      'opacity-0': transitionState === 'leave'
+    }">
+    <button
+      class="text-2xl tex bg-sky-500 font-semi-bold py-2 px-4 rounded-full hover:bg-sky-600"
+    >
+      {{ imageslist[currentIndex].buttTitle }}
+    </button>
   </div>
 </div>

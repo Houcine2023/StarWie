@@ -1,0 +1,13 @@
+<div class="flex flex-col items-center py-16 px-40 w-full h-full gap-10">
+  <div>
+    <h1 class="text-7xl font-bold text-center">Impact Numbers</h1>
+    <div class="border-4 border-primary mt-2"></div>
+  </div>
+  <div class="grid grid-cols-3 gap-10 w-full">
+    <div *ngFor="let impact of impacts" class="group flex flex-col items-start gap-4 bg-primary rounded-3xl p-8 text-white">
+      <ng-icon [name]="impact.icon" size="8rem" color="white" class="group-hover:scale-105 transition duration-300" ></ng-icon>
+      <span class="text-7xl font-black">{{impact.num}}</span>
+      <p class="text-xl">{{impact.paragraph}}</p>
+    </div>
+    
+</div>

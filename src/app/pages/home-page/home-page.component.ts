@@ -5,6 +5,10 @@ import { SignupComponent } from '../signup/signup.component';
 import { GaleryComponent } from '../../components/galery/galery.component';
 import { WelcomeComponent } from '../../components/welcome/welcome.component';
 import { WhatWeDoComponent } from '../../components/what-we-do/what-we-do.component';
+import { ImpactsComponent } from '../../components/impacts/impacts.component';
+import { NewsComponent } from "../../components/news/news.component";
+import { CommunityComponent } from "../../components/community/community.component";
+import { CommunityResourcesComponent } from "../../components/community-resources/community-resources.component";
 
 @Component({
   selector: 'app-home-page',
@@ -16,7 +20,11 @@ import { WhatWeDoComponent } from '../../components/what-we-do/what-we-do.compon
     GaleryComponent,
     WelcomeComponent,
     WhatWeDoComponent,
-  ],
+    ImpactsComponent,
+    NewsComponent,
+    CommunityComponent,
+    CommunityResourcesComponent
+],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css',
 })
