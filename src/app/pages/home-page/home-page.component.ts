@@ -9,6 +9,7 @@ import { ImpactsComponent } from '../../components/impacts/impacts.component';
 import { NewsComponent } from "../../components/news/news.component";
 import { CommunityComponent } from "../../components/community/community.component";
 import { CommunityResourcesComponent } from "../../components/community-resources/community-resources.component";
+import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-home-page',
@@ -23,7 +24,8 @@ import { CommunityResourcesComponent } from "../../components/community-resource
     ImpactsComponent,
     NewsComponent,
     CommunityComponent,
-    CommunityResourcesComponent
+    CommunityResourcesComponent,
+    FooterComponent
 ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css',

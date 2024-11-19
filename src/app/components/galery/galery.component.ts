@@ -25,20 +25,20 @@ export class GaleryComponent {
     {
       title: 'firstimage',
       images: '/first_galery.jpg',
-      paragraph: 'paragraph number 1',
-      buttTitle: 'Buttone1',
+      paragraph: 'Explore Our Lessons Plan',
+      buttTitle: 'Search Lessons',
     },
     {
       title: 'secondimage',
       images: '/seconde_galery.jpg',
-      paragraph: 'paragraph number 2',
-      buttTitle: 'Buttone2',
+      paragraph: ' Welcome To Our New Website',
+      buttTitle: 'Scroll Down',
     },
     {
       title: 'thirdimage',
       images: '/third_galery.jpg',
-      paragraph: 'paragraph number 3',
-      buttTitle: 'Buttone3',
+      paragraph: 'Inspiring The Engineers Of Tomorrow',
+      buttTitle: 'Explore Our Site',
     },
   ];
 

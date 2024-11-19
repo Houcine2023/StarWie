@@ -15,6 +15,7 @@ interface News {
   styleUrl: './news.component.css',
 })
 export class NewsComponent {
+
   news: News[] = [
     {
       image: 'StemSummit.jpg',
