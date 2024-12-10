@@ -59,8 +59,8 @@ export class WhatWeDoComponent {
       title : 'volunteers'
     },
     {
-      img : "/StemSummit.jpg",
-      paragraph : "Annual virtual event, where the TryEngineering community comes together to share and inspire with STEM opportunities, resources, and activities.",
+      img : "/nouur.JPG",
+      paragraph : "Access a collection of valuable resources designed to support teachers in creating engaging and impactful learning experiences for their students.",
       buttTitle : "Explore More",
       title : 'Resources'
     },
