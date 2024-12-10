@@ -10,18 +10,20 @@
       *ngFor="let new of news"
       class="group flex flex-col items-start gap-2 bg-white rounded-3xl text-black overflow-hidden"
     >
-      <img [src]="new.image" />
+      <img [src]="new.image" class="h-64 w-full object-cover" />
 
       <div class="p-4 space-y-4">
         <div class="flex gap-4 mb-4">
-          <span *ngFor="let tag of new.tags" class="text-primary text-lg font-medium"> {{ tag }} </span>
+          <span
+            *ngFor="let tag of new.tags"
+            class="text-primary text-lg font-medium"
+          >
+            {{ tag }}
+          </span>
         </div>
         <span class="text-3xl font-bold">{{ new.title }}</span>
         <p class="text-xl">{{ new.paragraph }}</p>
-        <button class="text-primary text-2xl font-medium">
-          Read More
-        </button>
-
+        <button class="text-primary text-2xl font-medium">Read More</button>
       </div>
     </div>
   </div>

@@ -9,13 +9,12 @@ interface LinkSection {
   paragraph: string;
 }
 
-
 @Component({
   selector: 'app-navbar',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
   linkSections: LinkSection[] = [
@@ -34,7 +33,7 @@ export class NavbarComponent {
         { label: ' Lesson Plans', url: '/Teacherslessons' },
         { label: 'Resources', url: '/Resources' },
       ],
-      image: '/Teachers.jpg',
+      image: '/Haroun.jpg',
       paragraph: 'Explore a variety of resources and tools.',
     },
     {
@@ -44,7 +43,7 @@ export class NavbarComponent {
         { label: 'STEM Fields', url: '/stemfields' },
         { label: 'Choosing Your University', url: '/University' },
       ],
-      image: '/students.jpg',
+      image: '/Student.jpg',
       paragraph: 'Explore a variety of resources and tools.',
     },
     {
@@ -55,14 +54,13 @@ export class NavbarComponent {
         { label: 'Webinars', url: '/webinars' },
         { label: 'Webinars', url: '/webinars' },
       ],
-      image: '/path/to/explore-resources-image.jpg',
+      image: '/Sheinmaze.jpg',
       paragraph: 'Explore a variety of resources and tools.',
     },
-  
+
     // Add more objects as needed
   ];
   hoveredSection: LinkSection | null = null;
-
 }
 /*
   <div class="flex justify-between items-end gap-28 ">
