@@ -1,42 +1,78 @@
 <div class="flex h-full w-full justify-center items-start relative">
+  <!-- Background overlay -->
+  <div class="absolute inset-0 z-0 bg-black/30 transition-transform duration-10 ease-in-out"></div>
+
+  <!-- Image with transition -->
   <img
     [src]="imageslist[currentIndex].images"
     alt="imageslist[currentIndex].title"
-    class="w-full h-[530px] object-cover transition-transform duration-500 ease-in-out"
+    class="w-full h-[530px] object-cover transition-transform duration-500 ease-in-out object-center"
     [ngClass]="{
       'opacity-100': transitionState === 'enter',
       'opacity-20': transitionState === 'leave'
     }"
   />
-  <div class="absolute top-[30%] left-[11%] transition-opacity duration-500" 
+
+  <!-- Static layer, unaffected by transitions -->
+  <div
+    class="absolute inset-0 z-10 bg-black/30 pointer-events-none"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Text over the image -->
+  <div
+    class="absolute top-[30%] left-[11%] transition-opacity duration-500 z-20"
     [ngClass]="{
       'opacity-100': transitionState === 'enter',
-      'opacity-2': transitionState === 'leave'
-    }">
-    <h1 class="text-7xl font-bold text-white">
+      'opacity-0': transitionState === 'leave'
+    }"
+  >
+    <h1 class="text-7xl font-bold text-white z-20">
       {{ imageslist[currentIndex].paragraph }}
     </h1>
   </div>
+
+  <!-- Navigation buttons -->
   <button
     (click)="nextSlide()"
-    class="absolute flex justify-center items-center text-white text-4xl bg-transparent bottom-[45%] right-[5%] w-14 h-14 rounded-full border-none hover:bg-sky-500"
+    class="absolute flex justify-center items-center text-white text-4xl bg-transparent bottom-[45%] right-[5%] w-14 h-14 rounded-full border-none hover:bg-sky-500 z-20"
   >
-    &gt;
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+  </svg>
+  
   </button>
 
   <button
     (click)="prevSlide()"
-    class="absolute text-white text-4xl bg-transparent bottom-[45%] left-[5%] w-14 h-14 rounded-full border-none hover:bg-sky-500 flex items-center justify-center"
+    class="absolute text-white text-4xl bg-transparent bottom-[45%] left-[5%] w-14 h-14 rounded-full border-none hover:bg-sky-500 flex items-center justify-center z-20"
   >
-    &lt;
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="size-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M15.75 19.5 8.25 12l7.5-7.5"
+      />
+    </svg>
   </button>
-  <div class="absolute bottom-[30%] left-[11%] transition-opacity duration-500" 
+
+  <!-- Button at the bottom -->
+  <div
+    class="absolute bottom-[30%] left-[11%] transition-opacity duration-500 z-20"
     [ngClass]="{
       'opacity-100': transitionState === 'enter',
       'opacity-0': transitionState === 'leave'
-    }">
+    }"
+  >
     <button
-      class="text-2xl tex bg-sky-500 font-semi-bold py-2 px-4 rounded-full hover:bg-sky-600"
+      class="text-2xl bg-sky-500 font-semi-bold py-2 px-4 rounded-full hover:bg-sky-600 z-20"
     >
       {{ imageslist[currentIndex].buttTitle }}
     </button>

@@ -1,0 +1,90 @@
+<div class="flex flex-col gap-40 py-36 w-full">
+  <div class="flex flex-row justify-around gap-16 px-16 items-center">
+    <div class="flex flex-col gap-10 items-center ">
+      <div class="w-max">
+        <h1 class="text-7xl font-bold">Resources Overview</h1>
+        <div class="bg-primary h-2"></div>
+      </div>
+      <div class="">
+        <p class="text-xl text-center max-w-3xl">
+          Explore the TryEngineerinxlg collection of resources, designed
+          specifically for use with students! Created by our IEEE experts and
+          TryEngineering partners, these resources feature lesson plans, videos,
+          games, and much more!
+        </p>
+      </div>
+    </div>
+  
+    <div class="flex flex-col text-white items-center justify-around rounded-xl gap-8 py-8 shadow-lg bg-primary">
+      <h1 class="text-4xl font-bold">TryEngineering on YouTube</h1>
+      <p class="text-xl text-center max-w-xl">
+        Visit our YouTube Channel for inights, keynotes, lesson plans, event
+        videos, and more!
+      </p>
+      <button class="py-3 px-6 text-black text-xl bg-yellow-500 hover:bg-yellow-600 border-none w-max  rounded-xl " >Visit YouTube</button>
+    </div>
+  </div>
+  <div class="flex flex-col items-center gap-10">
+    <div class="w-full flex justify-center gap-8">
+      <input
+        placeholder="Find what you are looking for across our website"
+        class=" border-2 border-primary rounded-full w-1/2 py-2 px-8 bg-primary/5 "
+      />
+      <span class="border-primary border-2 rounded-full px-8 py-2 text-primary hover:scale-105 transition duration-300 cursor-pointer ">
+        Search
+        </span>
+    </div>
+    <app-drop-down class="w-full"></app-drop-down>
+  </div>
+  
+  
+
+  <div class="grid grid-cols-3 gap-12 justify-between px-20">
+    <div *ngFor="let lesson of lessons" 
+         class="flex flex-col items-start justify-between rounded-xl shadow-xl pb-3 min-h-[400px] gap-3">
+      
+      <!-- Image Section -->
+      <div class="w-full pt-2 bg-primary rounded-t-xl overflow-hidden">
+        <img [src]="lesson.image" alt="" 
+             class="w-full h-full object-cover rounded-t-xl">
+      </div>
+      
+      <!-- Text Content -->
+      <div class="flex flex-col flex-1 gap-5 w-full pl-3" >
+        <a href="#" class="text-primary text-2xl">{{lesson.lessonplan}}</a>
+        <h1 class="text-4xl font-semibold min-h-[80px]">{{lesson.title}}</h1>
+        
+        <div class="flex flex-wrap gap-1">
+          <div *ngFor="let cat of lesson.categories" class="flex items-center gap-2">
+            <p class="text-gray-500 text-xl">{{cat.label}}:</p>
+            <a href="#" class="text-lg">{{cat.url}}</a>
+          </div>
+        </div>
+        
+        <p class="max-w-lg text-base text-gray-700 flex-1">
+          {{lesson.paragraph}}
+        </p>
+        
+        <button class="text-primary text-2xl font-medium self-start mt-auto">
+          {{lesson.buttTitle}}
+        </button>
+      </div>
+      
+    </div>
+    <div class="flex justify-center w-full col-span-3">
+      <div class="flex justify-center items-center gap-3 w-full text-xl">
+        <button>1</button>
+        <div class="bg-primary w-[3px] h-4"></div>
+        <button>2</button>
+        <div class="bg-primary w-[3px] h-4"></div>
+        <button>3</button>
+        <button>...</button>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+        </svg>
+        
+      </div>
+     
+    </div>
+  </div>
+  

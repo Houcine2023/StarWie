@@ -24,19 +24,19 @@ export class GaleryComponent {
   imageslist: Galeryimages[] = [
     {
       title: 'firstimage',
-      images: '/first_galery.jpg',
+      images: '/sanheja.jpg',
       paragraph: 'Explore Our Lessons Plan',
       buttTitle: 'Search Lessons',
     },
-    {
+     {
       title: 'secondimage',
-      images: '/seconde_galery.jpg',
+      images: '/maknesi2.JPG',
       paragraph: ' Welcome To Our New Website',
       buttTitle: 'Scroll Down',
     },
     {
       title: 'thirdimage',
-      images: '/third_galery.jpg',
+      images: '/Sheinmaze.jpg',
       paragraph: 'Inspiring The Engineers Of Tomorrow',
       buttTitle: 'Explore Our Site',
     },

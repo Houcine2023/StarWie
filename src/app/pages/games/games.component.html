@@ -1,1 +1,98 @@
-<p>games works!</p>
+<div class="flex flex-col py-12 gap-8 px-12">
+  <div class="flex py-5 rounded-3xl gap-5 bg-gradient-to-r from-primary to-pink-600 flex-col items-center">
+    <div class="flex flex-col w-max text-white">
+      <h1 class="text-5xl font-bold ">STEM Games</h1>
+      <div class="bg-yellow-500 h-2"></div>
+    </div>
+    <div>
+      <p class="text-xl min-w-3 text-white">
+        Learn, Play, and Explore STEM Fields!
+      </p>
+    </div>
+  </div>
+  <h2 class="text-2xl font-bold text-gray-800 mb-4">Explore by Category</h2>
+  <div class="grid grid-cols-4 gap-4">
+    <div
+      *ngFor="let category of categories"
+      [ngClass]="category.bgColor"
+      class="flex flex-col items-center text-center gap-2 py-8 rounded-2xl group hover:scale-[102%] transition duration-300 shadow-x cursor-pointer"
+    >
+      <div class="b ">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-14"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="category.icon" />
+        </svg>
+      </div>
+      <div class="flex flex-col w-max">
+        <h1 class="text-xl font-semibold">{{ category.title }}</h1>
+      </div>
+      <p class="text-lg mt-2">{{ category.description }}</p>
+    </div>
+  </div>
+  <h2 class="text-2xl font-bold text-gray-800 mb-4">Explore by Category</h2>
+  <div class="grid grid-cols-4 gap-8">
+    <!-- Card Loop -->
+    <div *ngFor="let card of cards"
+         class="flex flex-col items-start pt-3 group justify-between rounded-xl shadow-xl pb-4 b gap-3 hover:scale-105 transition-transform duration-300">
+      
+      <!-- Image Section -->
+      <div class="w-full rounded-t-xl overflow-hidden pt-2 bg-sky-500">
+        <img [src]="card.image" alt="{{card.title}}" class="w-full object-cover h-60 rounded-t-xl">
+      </div>
+      
+      <!-- Content Section -->
+      <div class="flex flex-col gap-4 px-4 flex-1">
+        <!-- Title -->
+        <h1 class="text-2xl font-semibold text-gray-900">{{card.title}}</h1>
+        
+        <!-- Categories -->
+        <div class="bg-gray-100 p-3 rounded-lg shadow-inner">
+          <h3 class="text-lg font-semibold text-gray-600">Categories:</h3>
+          <div class="flex flex-wrap gap-2">
+            <span *ngFor="let category of card.categories" 
+                  class="bg-gray-200 text-sm text-gray-800 px-3 py-1 rounded-md">
+              {{category.label}}
+            </span>
+          </div>
+        </div>
+        
+        <!-- Description -->
+        <p class="text-gray-700 text-base flex-1">{{card.description}}</p>
+        
+        <!-- Call to Action -->
+        <div class="flex justify-between items-center w-full">
+          <a href="#" class="text-primary text-lg font-medium flex items-center gap-2 hover:underline">
+            {{card.buttonText}}
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
+                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Pagination -->
+    <div class="flex justify-center w-full col-span-4">
+      <div class="flex gap-4 text-lg">
+        <button class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300">1</button>
+        <button class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300">2</button>
+        <button class="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300">3</button>
+        <span>...</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
+             stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+</div>

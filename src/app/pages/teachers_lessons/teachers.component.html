@@ -1,1 +1,131 @@
-<p>teachers works!</p>
+<div class="flex py-20 gap-24 px-12 flex-col">
+  <div class="flex relative px-6 flex-col py-36 gap-8 rounded-2xl shadow-lg bg-cover object-cover bg-center overflow-hidden">
+    <div class="absolute inset-0 bg-black/50 z-0"></div>
+    <div class="w-max z-10 text-white">
+      <h2 class="text-6xl font-semibold">Lesson plans</h2>
+      <div class="bg-yellow-500 h-2"></div>
+    </div>
+    <div class="z-10 text-white">
+      <p class="max-w-3xl text-xl font-semibold">
+        Explore interactive lesson plans for teachers! Find engaging math and ELA
+        lessons on key topics from the kindergarten–grade 5 curriculum, such as
+        arithmetic, fractions, measurement, time, money, reading, writing,
+        grammar, and more. With clear learning objectives, fun activities,
+        teaching tips, and a structured lesson flow, our lesson plans offer great
+        instructional support to teachers. Simplify lesson prep with original
+        resources, expertly crafted by teachers, for teachers! Start now for free!
+      </p>
+    </div>
+    <div class="flex gap-8 z-10 text-xl text-white">
+      <div class="flex w-max gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"  class="size-7 text-yellow-500">
+          <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+        </svg>
+        <p>Personalized Learning
+        </p>
+        <div class="bg-primary h-2 w-max"></div>
+        
+      </div>
+      <div class="flex gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-7 text-yellow-500">
+          <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+        </svg>
+        <p>Personalized Learning
+        </p>
+        
+      </div>
+      <div class="flex gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-7 text-yellow-500">
+          <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+        </svg>
+        <p>Personalized Learning
+        </p>
+        
+      </div>
+    </div>
+    <div class="z-10">
+      <button class=" text-xl py-3 px-6 rounded-full font-semibold bg-yellow-500 hover:bg-yellow-600">Join Our Community</button>
+    </div>
+  </div>
+  <div class="flex flex-col items-center gap-10">
+    <div class="w-full flex justify-center gap-8">
+      <input
+        placeholder="Find what you are looking for across our website"
+        class=" border-2 border-primary rounded-full w-1/2 py-2 px-8 bg-primary/5 "
+      />
+      <span class="border-primary border-2 rounded-full px-8 py-2 text-primary hover:scale-105 transition duration-300 cursor-pointer ">
+        Search
+        </span>
+    </div>
+    <app-drop-down class="w-full"></app-drop-down>
+  </div>
+  <div class=" flex flex-col justify-start w-max">
+    <h2 class="text-4xl font-bold">Readeble :</h2>
+    <div class="bg-primary h-2"></div>
+  </div>
+  <div class="grid grid-cols-4 gap-8 justify-between">
+    <div *ngFor="let lesson of lessons" 
+         class="flex group flex-col items-start justify-between rounded-xl shadow-xl pb-3 min-h-[400px] gap-3 hover:scale-[102%] transition duration-300">
+      
+      <!-- Image Section -->
+      <div class="w-full pt-2 bg-primary rounded-t-xl overflow-hidden">
+        <img [src]="lesson.image" alt="" 
+             class="w-full object-cover rounded-t-xl h-72">
+      </div>
+      
+      <!-- Text Content -->
+      <div class="flex flex-col flex-1 gap-5 w-full pl-3">
+        <a href="#" class="text-primary text-2xl">{{lesson.lessonplan}}</a>
+        <h1 class="text-4xl font-semibold min-h-[80px]">{{lesson.title}}</h1>
+        
+        <!-- Categories Section -->
+        <div class="bg-gray-100 p-3 rounded-lg shadow-inner w-full">
+          <h3 class="text-lg font-semibold text-gray-600">Categories:</h3>
+          <div class="flex flex-wrap gap-2">
+            <span *ngFor="let cat of lesson.categories" 
+                  class="text-gray-800 bg-gray-200 px-2 py-1 rounded-md text-sm">
+              {{cat.label}}
+            </span>
+          </div>
+        </div>
+        
+        <p class="max-w-lg text-base text-gray-700 flex-1">
+          {{lesson.paragraph}}
+        </p>
+        <div class="w-full flex justify-between pr-2">
+          <a class="text-primary text-2xl font-medium self-start flex items-center cursor-pointer">
+            {{lesson.buttTitle}}
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 text-xl  group-hover:translate-x-2  transition duration-300">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+            
+          </a>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 text-primary cursor-pointer transition duration-300">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+          </svg>
+          
+         
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    <!-- Pagination -->
+    <div class="flex justify-center w-full col-span-4">
+      <div class="flex justify-center items-center gap-3 w-full text-xl">
+        <button>1</button>
+        <div class="bg-primary w-[3px] h-4"></div>
+        <button>2</button>
+        <div class="bg-primary w-[3px] h-4"></div>
+        <button>3</button>
+        <button>...</button>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  
+</div>

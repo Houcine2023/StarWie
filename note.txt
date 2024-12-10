@@ -1,0 +1,55 @@
+lessons : 
+<div class="flex flex-col gap-40 py-36">
+  <div class="flex flex-row justify-around gap-16 px-16 items-center">
+    <div class="flex flex-col gap-10 items-center ">
+      <div class="w-max">
+        <h1 class="text-7xl font-bold">Resources Overview</h1>
+        <div class="bg-primary h-2"></div>
+      </div>
+      <div class="">
+        <p class="text-xl text-center max-w-3xl">
+          Explore the TryEngineerinxlg collection of resources, designed
+          specifically for use with students! Created by our IEEE experts and
+          TryEngineering partners, these resources feature lesson plans, videos,
+          games, and much more!
+        </p>
+      </div>
+    </div>
+  
+    <div class="flex flex-col text-white items-center justify-around rounded-xl gap-8 py-8 shadow-lg bg-primary">
+      <h1 class="text-4xl font-bold">TryEngineering on YouTube</h1>
+      <p class="text-xl text-center max-w-xl">
+        Visit our YouTube Channel for inights, keynotes, lesson plans, event
+        videos, and more!
+      </p>
+      <button class="py-3 px-6 text-black text-xl bg-yellow-500 hover:bg-yellow-600 border-none w-max  rounded-xl " >Visit YouTube</button>
+    </div>
+  </div>
+  
+  <app-drop-down></app-drop-down>
+
+  <div class="grid grid-cols-3 gap-12 justify-between px-20">
+    <div *ngFor="let lesson of lessons" class="flex flex-col items-stretch gap-5 rounded-xl pb-2 shadow-xl">
+      <div class="pt-2 bg-primary rounded-xl">
+        <img [src]="lesson.image" alt="" class="rounded-t-2xl object-cover w-fit">
+      </div>
+      <div class="flex flex-col gap-7 pl-2">
+        <div>
+          <a href="" class="text-primary text-2xl">{{lesson.lessonplan}}</a>
+          <div class="hover: bg-primary hover:h-1"></div>
+        </div>
+          <h1 class="text-4xl font-semibold">{{lesson.title}} </h1>
+        <div *ngFor="let cat of lesson.categories" class="flex flex-row gap-1">
+          <p class="text-gray-500 text-xl">{{cat.label}} :</p>
+          <a href="" class="text-lg">{{cat.url}}</a>
+  
+        </div>
+        <p class="max-w-lg">{{lesson.paragraph}}</p>
+        <div>
+          <button class="text-primary text-2xl font-medium">{{lesson.buttTitle}}</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>

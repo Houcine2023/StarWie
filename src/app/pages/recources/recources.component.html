@@ -1,1 +1,84 @@
-<p>recources works!</p>
+<div class="flex flex-col gap-28 items-center py-24 px-28">
+  <div class="relative flex flex-col justify-between items-start border-[1px] w-full py-16 pl-5 shadow-lg rounded-xl h-[650px] overflow-hidden bg-teachers bg-cover">
+    <div class="absolute inset-0 bg-black/40 z-0"></div>
+    <h1 class="z-10 text-6xl font-bold max-w-4xl text-white">
+      Where extraordinary teachers share their most innovative ideas
+    </h1>
+    <button class="z-10 text-xl font-semibold rounded-full hover:bg-yellow-600 px-6 py-3 bg-yellow-500">
+      Join Our Community
+    </button>
+  </div>
+
+  <div class="flex flex-col items-center gap-10 w-full">
+    <div class="w-full flex justify-center gap-8">
+      <input
+        placeholder="Find what you are looking for across our website"
+        class=" border-2 border-primary rounded-full w-1/2 py-2 px-8 bg-primary/5 "
+      />
+      <span class="border-primary border-2 rounded-full px-8 py-2 text-primary hover:scale-105 transition duration-300 cursor-pointer ">
+        Search
+        </span>
+    </div>
+    <app-drop-down class="w-full"></app-drop-down>
+  </div>
+
+  <div class="w-full flex-col items-start justify-start">
+    <div class="w-max">
+      <h2 class="text-3xl font-semibold">Explore Elementary School Resources</h2>
+      <div class="bg-primary h-2"></div>
+    </div>
+    
+  </div>
+
+  <div class="grid grid-cols-4 gap-8 justify-between">
+    <div *ngFor="let lesson of lessons" 
+         class="flex flex-col items-start justify-between rounded-xl shadow-xl pb-3 min-h-[400px] gap-3">
+      
+      <!-- Image Section -->
+      <div class="w-full pt-2 bg-primary rounded-t-xl overflow-hidden">
+        <img [src]="lesson.image" alt="" 
+             class="w-full h-full object-cover rounded-t-xl">
+      </div>
+      
+      <!-- Text Content -->
+      <div class="flex flex-col flex-1 gap-5 w-full pl-3">
+        <a href="#" class="text-primary text-2xl">{{lesson.lessonplan}}</a>
+        <h1 class="text-4xl font-semibold min-h-[80px]">{{lesson.title}}</h1>
+        
+        <!-- Categories Section -->
+        <div class="bg-gray-100 p-3 rounded-lg shadow-inner w-full">
+          <h3 class="text-lg font-semibold text-gray-600">Categories:</h3>
+          <div class="flex flex-wrap gap-2">
+            <span *ngFor="let cat of lesson.categories" 
+                  class="text-gray-800 bg-gray-200 px-2 py-1 rounded-md text-sm">
+              {{cat.label}}
+            </span>
+          </div>
+        </div>
+        
+        <p class="max-w-lg text-base text-gray-700 flex-1">
+          {{lesson.paragraph}}
+        </p>
+        
+        <button class="text-primary text-2xl font-medium self-start mt-auto">
+          {{lesson.buttTitle}}
+        </button>
+      </div>
+    </div>
+    
+    <!-- Pagination -->
+    <div class="flex justify-center w-full col-span-4">
+      <div class="flex justify-center items-center gap-3 w-full text-xl">
+        <button>1</button>
+        <div class="bg-primary w-[3px] h-4"></div>
+        <button>2</button>
+        <div class="bg-primary w-[3px] h-4"></div>
+        <button>3</button>
+        <button>...</button>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>

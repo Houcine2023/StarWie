@@ -1,3 +1,18 @@
-<app-header class=""></app-header>
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
+<div class="relative">
+  <!-- Fixed Header -->
+  <div class="w-full">
+    <app-header class="fixed w-full z-50"></app-header>
+  </div>
+
+  <!-- Fixed Navbar -->
+  <div id="navbar" class="fixed w-full z-40 transition-transform duration-500">
+    <app-navbar></app-navbar>
+  </div>
+
+  <!-- Main Homepage Content -->
+   
+  <div class="pt-[calc(100px+60px)]">
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </div>
+</div>

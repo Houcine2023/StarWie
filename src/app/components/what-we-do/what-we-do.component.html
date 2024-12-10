@@ -27,15 +27,19 @@
       />
       <div class="flex flex-col justify-between h-full gap-y-4">
         <div class="px-4 space-y-4">
-          <h3 class="font-semibold text-4xl">Titre</h3>
+          <h3 class="font-semibold text-4xl">{{section.title}}</h3>
           <p>{{ section.paragraph }}</p>
         </div>
-        <button
+        <button 
+
           class="bg-primary py-3 rounded-b-2xl text-white hover:bg-primary/90 flex justify-center items-end w-full gap-2 transition duration-300"
         >
-        <span class="font-bold text-xl">{{ section.buttTitle }}</span> 
-        <ng-icon name="heroChevronRight" size="1.6rem" class="group-hover:translate-x-2 transition duration-300" ></ng-icon>
+          <a href="/LessonsPlans">
 
+            <span class="font-bold text-xl">{{ section.buttTitle }}</span> 
+            <ng-icon name="heroChevronRight" size="1.6rem" class="group-hover:translate-x-2 transition duration-300" ></ng-icon>
+
+          </a>
         </button>
       </div>
     </div>

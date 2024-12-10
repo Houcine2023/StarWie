@@ -1,12 +1,12 @@
-<div class="w-full flex flex-col py-4 pb-0 gap-y-4">
-  <div class="flex justify-between items-end gap-40 px-20">
-    <img src="/logo-ieee-try.webp" alt="" class="h-24" />
+<div class="w-full flex flex-col mt-10 bg-white">
+  <div class="flex justify-between items-center gap-40 px-20">
+    <img src="/main-logo.png" alt="" class="h-24 py-2" />
     <input
       placeholder="Find what you are looking for across our website"
-      class="w-full border-2 border-black rounded-full py-4 px-8 bg-light-grey "
+      class="w-full border-2 border-primary rounded-full py-2 px-8 bg-primary/5 "
     />
-    <span class="material-symbols-outlined ">
-      search
+    <span class="border-primary border-2 rounded-full px-8 py-2 text-primary hover:scale-105 transition duration-300 cursor-pointer ">
+      Search
       </span>
   </div>
   <nav
@@ -19,7 +19,7 @@
         (mouseenter)="hoveredSection = section"
         (mouseleave)="hoveredSection = null"
       >
-        <span class="h-full flex items-center px-5 text-center cursor-pointer hover:bg-sky-600">{{
+        <span class="h-full flex items-center px-5 text-center cursor-pointer hover:bg-sky-600 truncate">{{
           section.title
         }}</span>
 
@@ -50,12 +50,12 @@
     </div>
     <div class="flex gap-4 items-center">
       <button
-        class="bg-yellow-500 font-bold py-2 px-4 rounded-full hover:bg-yellow-600"
+        class="bg-yellow-500 font-semibold py-2 px-4 rounded-full hover:bg-yellow-600 text-white"
       >
         Subscribe
       </button>
       <button
-        class="bg-sky-500 font-bold py-2 px-4 rounded-full hover:bg-sky-600"
+        class="bg-sky-500 font-semibold py-2 px-4 rounded-full hover:bg-sky-600 text-white"
       >
         Donate
       </button>

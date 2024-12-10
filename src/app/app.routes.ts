@@ -10,6 +10,8 @@ import { StemFieldsComponent } from './pages/stem-fields/stem-fields.component';
 import { TrainingCourseComponent } from './pages/training-course/training-course.component';
 import { ChosingUniversityComponent } from './pages/chosing-university/chosing-university.component';
 import { GrantsComponent } from './pages/grants/grants.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { LessonsPlansComponent } from './pages/lessons-plans/lessons-plans.component';
 
 
 export const routes: Routes = [
@@ -24,4 +26,6 @@ export const routes: Routes = [
   { path : 'trainingcourse', component : TrainingCourseComponent},
   { path : 'University', component : ChosingUniversityComponent},
   { path : 'grants', component : GrantsComponent},
+  { path : 'contact', component : ContactUsComponent},
+  { path : 'lessonsPlans', component : LessonsPlansComponent},
 ];

@@ -64,3 +64,18 @@ export class NavbarComponent {
   hoveredSection: LinkSection | null = null;
 
 }
+/*
+  <div class="flex justify-between items-end gap-28 ">
+    <div class="w-max h-max">
+      <img src="/SiteLogo.svg" alt="" class="" />
+    </div>
+    
+    <input
+      placeholder="Find what you are looking for across our website"
+      class="w-full border-2 border-black rounded-full py-4 px-8 bg-light-grey "
+    />
+    <span class="material-symbols-outlined ">
+      search
+      </span>
+  </div>
+*/
