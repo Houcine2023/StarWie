@@ -63,9 +63,9 @@ export class WhatWeDoComponent {
       title: 'volunteers',
     },
     {
-      img: '/Resource-Roundup-Graphic.jpg',
+      img: '/nouur.JPG',
       paragraph:
-        'Annual virtual event, where the TryEngineering community comes together to share and inspire with STEM opportunities, resources, and activities.',
+        'Access a collection of valuable resources designed to support teachers in creating engaging and impactful learning experiences for their students.',
       buttTitle: 'Explore More',
       title: 'Resources',
     },

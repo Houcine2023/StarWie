@@ -12,6 +12,7 @@ import { ChosingUniversityComponent } from './pages/chosing-university/chosing-u
 import { GrantsComponent } from './pages/grants/grants.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { LessonsPlansComponent } from './pages/lessons-plans/lessons-plans.component';
+import { RoboticsComponent } from './components/robotics/robotics.component';
 
 
 export const routes: Routes = [
@@ -28,4 +29,6 @@ export const routes: Routes = [
   { path : 'grants', component : GrantsComponent},
   { path : 'contact', component : ContactUsComponent},
   { path : 'lessonsPlans', component : LessonsPlansComponent},
+  {path : 'Robotics', component: RoboticsComponent},
+  
 ];
